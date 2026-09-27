@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>FirstAgent_DummyLLMService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Agents\AgentContextBuilder.cs" />
+    <Compile Remove="Agents\IAgentContextBuilder.cs" />
+    <Compile Remove="LLMs\ILLMService.cs" />
+    <Compile Remove="LLMs\LLMResponse.cs" />
+    <Compile Remove="LLMs\OllamaResponse.cs" />
+    <Compile Remove="LLMs\OllamaService.cs" />
+    <Compile Remove="Tools\ToolExecutor.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ModelContextProtocol.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="10.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="10.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.2.3" />
+  </ItemGroup>
+
+</Project>
